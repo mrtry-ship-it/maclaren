@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McLaren - Performance & Luxury</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=McLaren&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+
+        body {
+            background-color: #000000;
+            color: #9b59b6;
+            line-height: 1.6;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url(maclaren.jpg);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 400px;
+            padding: 2rem;
+        }
+
+        .h1 {
+            font-size: 4rem;
+            color: #ffffff;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serifs;
+            margin-bottom: 1rem;
+            text-transform: 1px ;
+            letter-spacing: 3px;
+            animation: fadeInUp 1s ease;
+            transition: 0.5s ;
+            
+        }
+
+        .h1:hover{
+            /* -webkit-text-stroke: 2px #FF8000; */
+            -webkit-text-stroke: 2px #9b59b6;
+            color: transparent;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            color: #8e44ad;
+            animation: fadeInUp 1s ease 0.2s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #9b59b6;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease 0.4s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        .button:hover {
+            background-color: #8e44ad;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(155, 89, 182, 0.3);
+        }
+
+        .features {
+            padding: 5rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background-color: rgba(155, 89, 182, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-card h3 {
+            color: #9b59b6;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem 2rem;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .nav-logo {
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50%;
+            transition: 0.5s;
+        }
+
+        .nav-logo:hover{
+            /* -webkit-text-stroke: 2px #9b59b6;
+            color: transparent; */
+            box-shadow: 0 5px 15px rgba(171, 40, 242, 0.837);
+
+        }
+
+        .nav-links a {
+            color: #9b59b6;
+            text-decoration: none;
+            font-size: 20px;
+            margin-left: 2rem;
+            transition: color 0.3s ease;
+            font-weight: bold;
+            transition: 0.5s;
+            
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+            /* -webkit-text-stroke: 1px #9b59b6;
+            color: transparent; */
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="#" class="nav-logo">McLAREN</a>
+        <div class="nav-links">
+            <a href="#models">Models</a>
+            <a href="#performance">Performance</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="h1">McLAREN</h1>
+            <p class="tagline">Experience the pinnacle of automotive excellence</p>
+            <a href="#discover" class="button">Discover More</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3>Unmatched Performance</h3>
+            <p>Experience the thrill of Formula 1-inspired engineering</p>
+        </div>
+        <div class="feature-card">
+            <h3>Innovative Design</h3>
+            <p>Where aerodynamics meets artistic expression</p>
+        </div>
+        <div class="feature-card">
+            <h3>Luxury Interior</h3>
+            <p>Handcrafted excellence in every detail</p>
+        </div>
+    </section>
+</body>
+</html>
